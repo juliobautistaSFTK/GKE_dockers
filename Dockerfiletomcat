@@ -1,0 +1,12 @@
+# Usa la imagen oficial de Tomcat
+FROM tomcat:8.5-jre8
+
+# Copia tu archivo WAR dentro del directorio de despliegue
+COPY ./target/TaskManager.war /usr/local/tomcat/webapps/
+
+# Expón el puerto 8080 (puerto por defecto de Tomcat)
+EXPOSE 8080
+
+# Inicia Tomcat
+CMD ["catalina.sh", "run"]
+

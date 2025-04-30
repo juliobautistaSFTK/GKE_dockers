@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mariadb-deployment
+spec:
+  replicas: 1  # Solo una instancia de MariaDB
+  selector:
+    matchLabels:
+      app: mariadb
+  template:
+    metadata:
+      labels:
+        app: mariadb
+    spec:
+      containers:
+        - name: mariadb
+          image: mariadb:11.7
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: "12345678"  # Cambia la contraseña si es necesario
+            - name: MYSQL_DATABASE
+              value: "taskmanager"
+            - name: MYSQL_USER
+              value: "user"
+            - name: MYSQL_PASSWORD
+              value: "12345678"
+          ports:
+            - containerPort: 3306  # Puerto por defecto de MariaDB
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mariadb-service
+spec:
+  selector:
+    app: mariadb
+  ports:
+    - protocol: TCP
+      port: 3306
+      targetPort: 3306  # Asegúrate de que coincida con el puerto del contenedor
+  clusterIP: None  # Utilizamos "None" para crear un servicio Headless

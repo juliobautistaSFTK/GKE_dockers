@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: taskmanager-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: taskmanager
+  template:
+    metadata:
+      labels:
+        app: taskmanager
+    spec:
+      containers:
+      - name: taskmanager
+        image: gcr.io/maximal-relic-457716-k6/my-tomcat-app   # Imagen de GCR
+        ports:
+        - containerPort: 8080
+        env:
+         - name: DB_HOST
+           value: "mariadb-service"  # Nombre del servicio de MariaDB
+         - name: DB_PORT
+           value: "3306"  # Puerto de MariaDB
+         - name: DB_NAME
+           value: "taskmanager"  # Nombre de la base de datos
+         - name: DB_USER
+           value: "user"  # Usuario de la base de datos
+         - name: DB_PASSWORD
+           value: "12345678"  # Contraseña de la base de datos

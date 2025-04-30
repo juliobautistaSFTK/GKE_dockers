@@ -1,0 +1,14 @@
+# Usamos la imagen oficial de MariaDB con la versión 11.7
+FROM mariadb:11.7
+
+# Establecemos las variables de entorno necesarias para la base de datos
+# Cambiar la contraseña predeterminada, puedes modificarla según sea necesario
+ENV MYSQL_ROOT_PASSWORD=12345678
+ENV MYSQL_DATABASE=taskmanager
+ENV MYSQL_USER=user
+ENV MYSQL_PASSWORD=12345678
+
+# Exponemos el puerto predeterminado de MariaDB
+EXPOSE 3306
+
+# Iniciamos MariaDB cuando el contenedor arranca

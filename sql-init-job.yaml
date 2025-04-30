@@ -1,0 +1,25 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: init-sql-job
+spec:
+  template:
+    metadata:
+      name: init-sql-pod
+    spec:
+      containers:
+        - name: init-sql
+          image: mariadb-custom
+          command: [ "sh", "-c", "mysql -h mariadb-service -u root -p$MYSQL_ROOT_PASSWORD taskmanager < /tmp/CreateSQLtask.sql" ]
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: "12345678"
+          volumeMounts:
+            - name: sql-script
+              mountPath: /tmp/CreateSQLtask.sql
+              subPath: CreateSQLtask.sql
+      volumes:
+        - name: sql-script
+          configMap:
+            name: sql-script-cm
+      restartPolicy: Never
