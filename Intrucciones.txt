@@ -1,0 +1,2 @@
+Ejecuta sh up.sh en la terminal
+abre al navegador y completa con TaskManager
