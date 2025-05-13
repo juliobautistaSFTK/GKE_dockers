@@ -4,6 +4,6 @@ steps:
     args: ['-c', 'sh up.sh']
     # Paso 2: Subir el WAR generado al bucket
   - name: 'gcr.io/cloud-builders/gsutil'
-    args: ['cp', 'target/app.war', 'gs://maximal-relic-war-artifacts-k6/app.war']
+    args: ['cp', 'target/TaskManager.war', 'gs://maximal-relic-war-artifacts-k6/TaskManager.war']
 options:
   logging: CLOUD_LOGGING_ONLY
