@@ -2,6 +2,9 @@ steps:
   - name: 'ubuntu'
     entrypoint: 'bash'
     args: ['-c', 'sh upgbuild.sh']
+  - name: 'ubuntu'
+    entrypoint: 'bash'
+    args: ['-c', 'ls -lh target']    
     # Paso 2: Subir el WAR generado al bucket
   - name: 'gcr.io/cloud-builders/gsutil'
     args: ['cp', 'target/TaskManager.war', 'gs://maximal-relic-war-artifacts-k6/TaskManager.war']
