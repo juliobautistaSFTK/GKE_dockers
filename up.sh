@@ -19,4 +19,4 @@ docker cp CreateSQLtask.sql mariadb_1:/tmp/CreateSQLtask.sql
 sleep 30
 docker exec -i mariadb_1 mysql -u root -p12345678 taskmanager < CreateSQLtask.sql
 sleep 6
-gsutil cp target/*war gs://maximal-relic-war-artifacts-k6/
+
