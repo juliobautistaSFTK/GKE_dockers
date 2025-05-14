@@ -15,7 +15,9 @@
 <body>
 
 <div class="container">
-    <h2>Lista FROM GITHUB cloud build Tareas</h2>
+    <h2>Guardado en github, compilado en cloud build copiado en cluster y desplegado en docker</h2>
+    <h2>Lista de Tareas</h2>
+
 
     <a href="jsp/agregarTarea.jsp" class="btn btn-add">➕ Agregar Nueva Tarea</a>
 
