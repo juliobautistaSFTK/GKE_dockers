@@ -7,7 +7,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Lista de Tareas</title>
+    <title>Lista FROM GITHUB Tareas</title>
     <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/styles.css">
 
     <base href="${pageContext.request.contextPath}/">
