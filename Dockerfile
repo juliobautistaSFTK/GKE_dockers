@@ -16,5 +16,3 @@ COPY . /app
 
 # Mantener el contenedor en ejecución
 CMD ["tail", "-f", "/dev/null"]
-
-
