@@ -2,7 +2,7 @@ steps:
   - name: 'maven:3.6.3-jdk-8'
     entrypoint: 'mvn'
     args: ['clean', 'install']
- - name: 'ubuntu'
+  - name: 'ubuntu'
     entrypoint: 'bash'
     args: ['-c', 'ls -lh target']    
 options:
