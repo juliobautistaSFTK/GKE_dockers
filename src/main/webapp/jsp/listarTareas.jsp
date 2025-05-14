@@ -15,7 +15,7 @@
 <body>
 
 <div class="container">
-    <h2>GITHUB, cloud build y docker</h2>
+    <h2>GITHUB, google cloud build y docker</h2>
     <h2>Lista de Tareas</h2>
 
 
