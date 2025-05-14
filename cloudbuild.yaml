@@ -2,9 +2,9 @@ steps:
   - name: 'maven:3.6.3-jdk-8'
     entrypoint: 'mvn'
     args: ['clean', 'install']
-  - name: 'listar war'
+ - name: 'ubuntu'
     entrypoint: 'bash'
-    args: ['-c', 'ls -lh target']  
+    args: ['-c', 'ls -lh target']    
 options:
   logging: CLOUD_LOGGING_ONLY
 
