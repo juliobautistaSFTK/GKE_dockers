@@ -1,7 +1,0 @@
-/app/src/main/java/com/softtek/servlet/EliminarTareaServlet.java
-/app/src/main/java/com/softtek/servlet/EditarTareaServlet.java
-/app/src/main/java/com/softtek/model/Task.java
-/app/src/main/java/com/softtek/util/DatabaseConnection.java
-/app/src/main/java/com/softtek/dao/TaskDAO.java
-/app/src/main/java/com/softtek/servlet/ListarTareasServlet.java
-/app/src/main/java/com/softtek/servlet/AgregarTareaServlet.java

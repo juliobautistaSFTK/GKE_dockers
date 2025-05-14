@@ -1,7 +1,0 @@
-com/softtek/util/DatabaseConnection.class
-com/softtek/model/Task.class
-com/softtek/servlet/ListarTareasServlet.class
-com/softtek/dao/TaskDAO.class
-com/softtek/servlet/EditarTareaServlet.class
-com/softtek/servlet/AgregarTareaServlet.class
-com/softtek/servlet/EliminarTareaServlet.class
