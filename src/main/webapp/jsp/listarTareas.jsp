@@ -7,7 +7,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Lista FROM GITHUB cloud build Tareas</title>
+    <title>Lista de Tareas</title>
     <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/styles.css">
 
     <base href="${pageContext.request.contextPath}/">
@@ -15,7 +15,7 @@
 <body>
 
 <div class="container">
-    <h2>Lista de Tareas</h2>
+    <h2>Lista FROM GITHUB cloud build Tareas</h2>
 
     <a href="jsp/agregarTarea.jsp" class="btn btn-add">➕ Agregar Nueva Tarea</a>
 
