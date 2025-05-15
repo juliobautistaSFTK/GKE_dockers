@@ -15,7 +15,7 @@
 <body>
 
 <div class="container">
-    <h2>Lista de Tareas</h2>
+    <h2>Lista de Tareas github, Kubernetes</h2>
 
     <a href="jsp/agregarTarea.jsp" class="btn btn-add">➕ Agregar Nueva Tarea</a>
 
