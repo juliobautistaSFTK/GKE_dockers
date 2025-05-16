@@ -7,7 +7,7 @@ steps:
     args: ['-c', 'ls -lh target']
   - name: 'ubuntu1'
     entrypoint: 'bash'
-    args: ['-c', 'cat src/main/java/com/softtek/util/DatabaseConnection.java]    
+    args: ['-c', 'cat src/main/java/com/softtek/util/DatabaseConnection.java']    
     # Paso 3: Subir el WAR generado al bucket
   - name: 'gcr.io/cloud-builders/gsutil'
     args: ['cp', 'target/TaskManager.war', 'gs://maximal-relic-war-artifacts-k6/TaskManagerKS.war']    
