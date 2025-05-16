@@ -27,9 +27,9 @@
     </dependency>
 
     <dependency>
-      <groupId>org.mariadb.jdbc</groupId>
-      <artifactId>mariadb-java-client</artifactId>
-      <version>3.3.2</version>  <!-- Usa la última versión disponible -->
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>8.0.33</version>
     </dependency>
 
     <!-- JUnit para pruebas -->
