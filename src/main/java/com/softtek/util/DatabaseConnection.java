@@ -15,7 +15,7 @@ public class DatabaseConnection {
 			Class.forName("com.mysql.cj.jdbc.Driver");
             conn = DriverManager.getConnection(URL, USER, PASSWORD);
 		} catch (ClassNotFoundException e) {
-			throw new SQLException("Error cargando el driver JDBC de MariaDB", e);
+			throw new SQLException("Error cargando el driver JDBC de mysql", e);
 		       
 		} catch (SQLException e) {
 			throw e;
