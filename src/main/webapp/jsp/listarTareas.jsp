@@ -15,7 +15,7 @@
 <body>
 
 <div class="container">
-    <h2>Lista de tareas con GITHUB, cloud build, bucket, compute engine y docker</h2>
+    <h2>GITHUB, cloud build, bucket, compute engine y docker</h2>
     <h2>Lista de Tareas</h2>
 
 
