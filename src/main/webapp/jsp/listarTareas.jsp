@@ -7,7 +7,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Lista FROM GITHUB Tareas</title>
+    <title>Lista de Tareas</title>
     <link rel="stylesheet" type="text/css" href="<%= request.getContextPath() %>/css/styles.css">
 
     <base href="${pageContext.request.contextPath}/">
@@ -15,7 +15,7 @@
 <body>
 
 <div class="container">
-    <h2>GITHUB, google cloud build, bucket y docker</h2>
+    <h2>Lista de tareas con GITHUB, cloud build, bucket, compute engine y docker</h2>
     <h2>Lista de Tareas</h2>
 
 
