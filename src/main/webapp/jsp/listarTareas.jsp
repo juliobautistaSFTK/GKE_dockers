@@ -15,7 +15,8 @@
 <body>
 
 <div class="container">
-    <h2>Lista de tareas usando github, cloud build, bucket, kubernetes, cloud sql</h2>
+    <h2>Github, cloud build, bucket, kubernetes, cloud sql</h2>
+    <h2>Lista de tareas</h2>
 
     <a href="jsp/agregarTarea.jsp" class="btn btn-add">➕ Agregar Nueva Tarea</a>
 
