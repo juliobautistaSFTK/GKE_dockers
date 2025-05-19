@@ -1,7 +1,20 @@
+rm TaskManager.war 
+sudo rm target/TaskManager.war
 
-docker network create red1
-sleep 20
-docker build -t maven-java8 .
-sleep 20
-docker run -d --name maven-java8-container -v ./target:/app/target --network red1 maven-java8 mvn install
-sleep 7
+gcloud container clusters get-credentials autopilot-cluster-1 --region us-central1
+
+gcloud projects add-iam-policy-binding maximal-relic-457716-k6 \
+  --member="serviceAccount:cloudsql-access@maximal-relic-457716-k6.iam.gserviceaccount.com" \
+  --role="roles/logging.logWriter" \
+  --condition=None
+
+gcloud projects add-iam-policy-binding maximal-relic-457716-k6 \
+  --member="serviceAccount:cloudsql-access@maximal-relic-457716-k6.iam.gserviceaccount.com" \
+  --role="roles/storage.objectViewer" \
+  --condition=None
+
+gsutil cp gs://maximal-relic-war-artifacts-k6/TaskManager.war TaskManager.war
+
+docker cp TaskManager.war my-tomcat-container:/usr/local/tomcat/webapps/
+
+docker restart my-tomcat-container
