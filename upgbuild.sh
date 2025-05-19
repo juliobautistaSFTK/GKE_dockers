@@ -19,12 +19,9 @@ gsutil cp gs://maximal-relic-war-artifacts-k6/TaskManagerKS.war TaskManager.war
 
 sudo cp TaskManager.war target/
 
-
 gcloud container images delete gcr.io/maximal-relic-457716-k6/my-tomcat-app:latest
 
 kubectl scale deployment taskmanager-deployment --replicas=0
-#kubectl scale deployment taskmanager-deployment --replicas=2
-
 
 docker build -f Dockerfiletomcat -t gcr.io/maximal-relic-457716-k6/my-tomcat-app:latest .
 docker push gcr.io/maximal-relic-457716-k6/my-tomcat-app:latest
@@ -35,5 +32,3 @@ kubectl apply -f taskmanager-service.yaml
 kubectl get pods
 kubectl get svc
 
-kubectl logs taskmanager-deployment-7bf5b56ddf-8795f -c taskmanager
-gcloud container images delete gcr.io/maximal-relic-457716-k6/my-tomcat-app:latest
