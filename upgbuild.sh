@@ -16,7 +16,6 @@ gsutil cp gs://maximal-relic-war-artifacts-k6/TaskManagerK.war TaskManager.war
 sudo cp TaskManager.war target/
 
 kubectl scale deployment tomcat-deployment --replicas=0
-kubectl scale deployment tomcat-deployment --replicas=2
 
 gcloud container images delete gcr.io/maximal-relic-457716-k6/my-tomcat-appk:latest
 docker stop maven-java8-containerk
