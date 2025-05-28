@@ -15,7 +15,7 @@
 <body>
 
 <div class="container">
-    <h2>Github, Cloud build, Bucket, Kubernetes, docker sql</h2>
+    <h2>Github, Cloud build, Bucket, Kubernetes, pod con sql</h2>
     <h2>Lista de Tareas</h2>
 
 <a href="jsp/agregarTarea.jsp" class="btn btn-add">➕ Agregar Nueva Tarea</a>
