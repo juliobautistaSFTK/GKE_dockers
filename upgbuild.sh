@@ -10,7 +10,6 @@ gcloud projects add-iam-policy-binding maximal-relic-457716-k6 \
   --role="roles/storage.objectViewer" \
   --condition=None
 
-
 gsutil cp gs://maximal-relic-war-artifacts-k6/TaskManagerK.war TaskManager.war
 
 sudo cp TaskManager.war target/
