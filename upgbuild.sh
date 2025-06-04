@@ -18,3 +18,4 @@ gsutil cp gs://maximal-relic-war-artifacts-k6/TaskManager.war TaskManager.war
 docker cp TaskManager.war my-tomcat-container:/usr/local/tomcat/webapps/
 
 docker restart my-tomcat-container
+
