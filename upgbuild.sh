@@ -31,4 +31,4 @@ kubectl apply -f taskmanager-service.yaml
 
 kubectl get pods
 kubectl get svc
-
+ 
