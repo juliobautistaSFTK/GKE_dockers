@@ -26,10 +26,12 @@ pipeline:
                     command: echo hello world
                   timeout: ""
                   type: Run
-          platform:
-            arch: Amd64
-            os: Linux
-          runtime:
-            spec: {}
-            type: Docker
+          infrastructure:
+            type: VM
+            spec:
+              type: Pool
+              spec:
+                poolName: GCP
+                harnessImageConnectorRef: account.harnessImage
+                os: Linux
         type: CI
