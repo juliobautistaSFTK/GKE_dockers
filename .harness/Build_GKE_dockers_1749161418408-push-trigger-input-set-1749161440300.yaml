@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_GKE_dockers_1749161418408-push-trigger-input-set
+  identifier: Build_GKE_dockers_1749161418408pushtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_GKE_dockers_1749161418408
+    properties:
+      ci:
+        codebase:
+          build:
+            type: branch
+            spec:
+              branch: <+trigger.branch>
