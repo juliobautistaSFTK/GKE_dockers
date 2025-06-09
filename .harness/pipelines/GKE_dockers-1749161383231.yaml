@@ -23,6 +23,7 @@ pipeline:
                   identifier: echo
                   name: echo
                   spec:
+                    shell: Bash
                     command: echo hello world
                   timeout: ""
                   type: Run
