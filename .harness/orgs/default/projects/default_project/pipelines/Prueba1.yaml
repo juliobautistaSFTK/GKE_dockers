@@ -7,27 +7,26 @@ pipeline:
   properties:
     ci:
       codebase:
-        repoName: account.harness-filestore
+        connectorRef: account.harness-filestore
+        repoName: harness-filestore
         build: <+input>
   stages:
     - stage:
         name: test
         identifier: test
-        description: ""
         type: CI
         spec:
           cloneCodebase: true
-          caching:
-            enabled: true
-            override: true
           infrastructure:
             type: VM
             spec:
               type: Pool
               spec:
                 poolName: GCP
+                platform:
+                  os: Linux
+                  arch: Amd64
                 harnessImageConnectorRef: account.harnessImage
-                os: Linux
           execution:
             steps:
               - step:
@@ -36,4 +35,6 @@ pipeline:
                   identifier: Run_1
                   spec:
                     shell: Sh
-                    command: ls
+                    command: |
+                      echo "Contenido del workspace:"
+                      ls
