@@ -36,5 +36,5 @@ pipeline:
                   spec:
                     shell: Sh
                     command: |
-                      echo "Contenido del workspace:"
-                      ls
+                      echo "Ejecutando en pool de Harness"
+                      ls -la
